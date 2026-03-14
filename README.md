@@ -182,7 +182,7 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 **Víctor Hugo Pinto Páez**  
 Maestría en Prevención y Gestión de Riesgos  
 Universidad San Gregorio de Portoviejo, Ecuador  
-📧 [your.email@domain.com]
+📧 vpintopaez@hotmail.com
 
 ---
 
