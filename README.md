@@ -1,6 +1,6 @@
 # Agroclimatic Risk of Andean Crops under CMIP6 Scenarios in Imbabura, Ecuador
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19022773.svg)](https://doi.org/10.5281/zenodo.19022773)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/release/python-3110/)
 
@@ -166,7 +166,7 @@ If you use this pipeline or data in your research, please cite:
 ```
 Pinto Páez, V. H. (2026). Agroclimatic risk of Andean crops under CMIP6 scenarios 
 in Imbabura, Ecuador: A reproducible Random Forest–Bayesian Network pipeline 
-[Software]. Zenodo. https://doi.org/10.5281/zenodo.XXXXXXX
+[Software]. Zenodo. https://doi.org/10.5281/zenodo.19022773
 ```
 
 ---

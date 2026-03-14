@@ -10,7 +10,7 @@ version: 1.0.0
 date-released: 2026-03-14
 license: MIT
 repository-code: "https://github.com/YOUR_USERNAME/agroclimatic-risk-imbabura"
-doi: "10.5281/zenodo.XXXXXXX"
+doi: "10.5281/zenodo.19022773"
 abstract: >
   Complete reproducible pipeline for parish-level agroclimatic risk assessment
   of four Andean crops under CMIP6 scenarios across 42 parishes of Imbabura
