@@ -1,0 +1,56 @@
+{
+  "title": "Agroclimatic risk of Andean crops under CMIP6 scenarios in Imbabura, Ecuador: A reproducible Random Forest–Bayesian Network pipeline",
+  "description": "Complete reproducible pipeline for parish-level agroclimatic risk assessment of four Andean crops (potato, maize, common bean, quinoa) under CMIP6 scenarios (SSP1-2.6, SSP3-7.0, SSP5-8.5) across the 42 parishes of Imbabura Province, Ecuador. The pipeline integrates Species Distribution Models (Random Forest), Bayesian Networks for probabilistic risk integration following the IPCC AR6 framework, and the BASD-CMIP6-PE bias-corrected climate dataset. Outputs include 1,512 parish-level Risk Index values, 58 cartographic products, and 42 parish technical sheets with adaptation recommendations for Decentralized Autonomous Governments (GADs).",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Pinto Páez, Víctor Hugo",
+      "affiliation": "Universidad San Gregorio de Portoviejo, Ecuador",
+      "orcid": ""
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "agroclimatic risk",
+    "Random Forest",
+    "Bayesian Networks",
+    "CMIP6",
+    "species distribution models",
+    "Andean crops",
+    "Imbabura",
+    "Ecuador",
+    "BASD-CMIP6-PE",
+    "climate change adaptation",
+    "IPCC AR6",
+    "territorial management",
+    "potato",
+    "maize",
+    "common bean",
+    "quinoa"
+  ],
+  "access_right": "open",
+  "language": "eng",
+  "related_identifiers": [
+    {
+      "identifier": "10.1038/s41597-023-02863-z",
+      "relation": "uses",
+      "scheme": "doi",
+      "resource_type": "dataset"
+    },
+    {
+      "identifier": "10.7910/DVN/SWPENT",
+      "relation": "uses",
+      "scheme": "doi",
+      "resource_type": "dataset"
+    }
+  ],
+  "references": [
+    "Fernandez-Palomino, C. A., et al. (2024). High-resolution climate projection dataset based on CMIP6 for Peru and Ecuador: BASD-CMIP6-PE. Scientific Data, 11, 34. https://doi.org/10.1038/s41597-023-02863-z",
+    "Breiman, L. (2001). Random Forests. Machine Learning, 45(1), 5-32.",
+    "Pearl, J. (1988). Probabilistic Reasoning in Intelligent Systems. Morgan Kaufmann.",
+    "IPCC. (2022). Climate Change 2022: Impacts, Adaptation and Vulnerability. Cambridge University Press.",
+    "IFPRI. (2024). MapSPAM 2020 V2r0. Harvard Dataverse. https://doi.org/10.7910/DVN/SWPENT"
+  ],
+  "grants": [],
+  "notes": "This pipeline was developed as part of a Master's thesis in Risk Prevention and Management (Mention in Climate Variability and Territorial Resilience) at Universidad San Gregorio de Portoviejo, Ecuador (Cohort 2, 2026). The pipeline is designed for replication across Ecuadorian provinces covered by the BASD-CMIP6-PE dataset."
+}

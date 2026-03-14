@@ -1,0 +1,113 @@
+{
+  "proyecto": {
+    "titulo": "Modelamiento del riesgo agroclimático mediante Random Forest y Redes Bayesianas bajo escenarios CMIP6: Aplicación a cultivos andinos en Imbabura, Ecuador",
+    "autor": "Víctor Hugo Pinto Páez",
+    "universidad": "Universidad San Gregorio de Portoviejo",
+    "programa": "Maestría en Prevención y Gestión de Riesgos - Mención en Variabilidad Climática y Resiliencia Territorial",
+    "area_estudio": "Provincia de Imbabura, Ecuador",
+    "version_protocolo": "1.0.0",
+    "fecha_inicio": "2026-02-01"
+  },
+  "cultivos": {
+    "papa": {
+      "nombre_cientifico": "Solanum tuberosum L.",
+      "taxon_key": 2930137,
+      "familia": "Solanaceae",
+      "t_optima_min": 15,
+      "t_optima_max": 20,
+      "t_critica": 25,
+      "p_minima_mm": 500
+    },
+    "maiz": {
+      "nombre_cientifico": "Zea mays L.",
+      "taxon_key": 5290052,
+      "familia": "Poaceae",
+      "t_optima_min": 20,
+      "t_optima_max": 30,
+      "t_critica": 35,
+      "p_minima_mm": 500
+    },
+    "frejol": {
+      "nombre_cientifico": "Phaseolus vulgaris L.",
+      "taxon_key": 2974859,
+      "familia": "Fabaceae",
+      "t_optima_min": 18,
+      "t_optima_max": 24,
+      "t_critica": 30,
+      "p_minima_mm": 400
+    },
+    "quinua": {
+      "nombre_cientifico": "Chenopodium quinoa Willd.",
+      "taxon_key": 3084041,
+      "familia": "Amaranthaceae",
+      "t_optima_min": 15,
+      "t_optima_max": 20,
+      "t_critica": 32,
+      "p_minima_mm": 300
+    }
+  },
+  "escenarios_climaticos": {
+    "dataset": "BASD-CMIP6-PE",
+    "doi": "10.1038/s41597-023-02863-z",
+    "resolucion_espacial": "0.1° (~10 km)",
+    "resolucion_temporal": "diaria",
+    "periodo_historico": "1850-2014",
+    "periodo_futuro": "2015-2100",
+    "variables": [
+      "pr",
+      "tas",
+      "tasmin",
+      "tasmax"
+    ],
+    "escenarios_ssp": [
+      "SSP1-2.6",
+      "SSP3-7.0",
+      "SSP5-8.5"
+    ],
+    "gcms": [
+      "CanESM5",
+      "IPSL-CM6A-LR",
+      "UKESM1-0-LL",
+      "CNRM-CM6-1",
+      "CNRM-ESM2-1",
+      "MIROC6",
+      "GFDL-ESM4",
+      "MRI-ESM2-0",
+      "MPI-ESM1-2-HR",
+      "EC-Earth3"
+    ],
+    "horizontes_temporales": {
+      "historico": "1981-2014",
+      "futuro_cercano": "2021-2040",
+      "futuro_medio": "2041-2060",
+      "futuro_lejano": "2061-2080"
+    }
+  },
+  "criterios_modelos": {
+    "random_forest": {
+      "auc_roc_minimo": 0.75,
+      "tss_minimo": 0.5,
+      "kappa_minimo": 0.4,
+      "oob_error_maximo": 0.3,
+      "diferencia_train_test_maxima": 0.1
+    },
+    "red_bayesiana": {
+      "coherencia_probabilistica": 1.0,
+      "tolerancia_cpt": 0.001
+    }
+  },
+  "rutas": {
+    "base": "D:\\POSGRADOS\\TESIS",
+    "protocolo": "D:\\POSGRADOS\\TESIS\\01_PROTOCOLO",
+    "datos": "D:\\POSGRADOS\\TESIS\\02_DATOS",
+    "scripts": "D:\\POSGRADOS\\TESIS\\03_SCRIPTS",
+    "resultados": "D:\\POSGRADOS\\TESIS\\04_RESULTADOS",
+    "documentacion": "D:\\POSGRADOS\\TESIS\\05_DOCUMENTACION",
+    "tesis": "D:\\POSGRADOS\\TESIS\\06_TESIS"
+  },
+  "metadatos": {
+    "fecha_creacion": "2026-02-01T13:33:20.016928",
+    "version_config": "1.0.0",
+    "estandar_iso": "ISO 19115:2014"
+  }
+}

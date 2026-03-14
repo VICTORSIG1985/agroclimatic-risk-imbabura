@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "Agroclimatic risk of Andean crops under CMIP6 scenarios in Imbabura, Ecuador: A reproducible Random Forest–Bayesian Network pipeline"
+authors:
+  - family-names: "Pinto Páez"
+    given-names: "Víctor Hugo"
+    affiliation: "Universidad San Gregorio de Portoviejo, Ecuador"
+version: 1.0.0
+date-released: 2026-03-14
+license: MIT
+repository-code: "https://github.com/YOUR_USERNAME/agroclimatic-risk-imbabura"
+doi: "10.5281/zenodo.XXXXXXX"
+abstract: >
+  Complete reproducible pipeline for parish-level agroclimatic risk assessment
+  of four Andean crops under CMIP6 scenarios across 42 parishes of Imbabura
+  Province, Ecuador. Integrates Random Forest Species Distribution Models and
+  Bayesian Networks following the IPCC AR6 risk framework.
+keywords:
+  - agroclimatic risk
+  - Random Forest
+  - Bayesian Networks
+  - CMIP6
+  - Imbabura
+  - Ecuador
+  - climate change adaptation
+references:
+  - type: article
+    title: "High-resolution climate projection dataset based on CMIP6 for Peru and Ecuador: BASD-CMIP6-PE"
+    authors:
+      - family-names: "Fernandez-Palomino"
+        given-names: "C. A."
+    journal: "Scientific Data"
+    volume: 11
+    year: 2024
+    doi: "10.1038/s41597-023-02863-z"

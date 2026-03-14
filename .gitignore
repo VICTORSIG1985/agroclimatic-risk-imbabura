@@ -1,0 +1,54 @@
+# Data files (too large for GitHub — use DOI links)
+*.nc
+*.tif
+*.tiff
+*.geotiff
+data/raw/
+data/processed/
+
+# Large outputs (shared via Zenodo/Google Drive)
+outputs/maps/*.pdf
+outputs/fichas/*.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.env
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.bak
+
+# Model files (large — reference via Zenodo)
+*.joblib
+*.pkl
+
+# Keep these sample files
+!data/sample/
+!data/sample/*.csv
