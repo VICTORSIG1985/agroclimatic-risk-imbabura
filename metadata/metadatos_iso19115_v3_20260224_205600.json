@@ -1,0 +1,99 @@
+{
+  "fileIdentifier": "SCRIPT_04C_v3_EXPOSICION_20260224_205600",
+  "language": "spa",
+  "characterSet": "utf8",
+  "hierarchyLevel": "dataset",
+  "contact": {
+    "individualName": "Víctor Hugo Pinto Páez",
+    "organisationName": "Universidad San Gregorio de Portoviejo",
+    "role": "author"
+  },
+  "dateStamp": "2026-02-24",
+  "identificationInfo": {
+    "title": "Exposición agrícola por parroquia — Imbabura",
+    "abstract": "Superficie cosechada (ha) de papa, maíz y fréjol a nivel parroquial en la provincia de Imbabura, Ecuador, obtenida mediante estadísticas zonales de rasters MapSPAM v2r0 2020 sobre límites parroquiales CONALI. Comparación con totales provinciales ESPAC 2024. Quinua disponible solo a nivel provincial (limitación de fuentes).",
+    "purpose": "Componente de EXPOSICIÓN del modelo de riesgo agroclimático IPCC AR5/AR6.",
+    "credit": [
+      "IFPRI/MapSPAM (2024). doi:10.7910/DVN/SWPENT",
+      "CONALI/INEC — Límites parroquiales oficiales Ecuador",
+      "INEC (2024). ESPAC 2024"
+    ],
+    "spatialResolution": "~10 km (MapSPAM) → parroquial (CONALI)",
+    "temporalExtent": "2020 (MapSPAM) / 2024 (ESPAC)",
+    "geographicBoundingBox": {
+      "westBoundLongitude": -78.93,
+      "eastBoundLongitude": -77.7,
+      "southBoundLatitude": 0.078,
+      "northBoundLatitude": 0.87
+    },
+    "topicCategory": "farming",
+    "keyword": [
+      "exposición agrícola",
+      "cultivos andinos",
+      "Imbabura",
+      "desagregación espacial",
+      "MapSPAM",
+      "ESPAC",
+      "CONALI",
+      "papa",
+      "maíz",
+      "fréjol",
+      "quinua"
+    ]
+  },
+  "dataQualityInfo": {
+    "scope": "dataset",
+    "lineage": {
+      "statement": "Superficie cosechada extraída de MapSPAM v2r0 2020 (IFPRI, doi:10.7910/DVN/SWPENT) mediante estadísticas zonales sobre polígonos parroquiales CONALI/INEC. Comparación con totales provinciales ESPAC 2024 (INEC). Quinua reportada solo a nivel provincial por limitación de representatividad muestral de ESPAC (INEC, 2022).",
+      "processStep": [
+        {
+          "description": "Descarga automatizada MapSPAM + ESPAC"
+        },
+        {
+          "description": "Carga parroquias CONALI (fuente oficial)"
+        },
+        {
+          "description": "Zonal stats: MapSPAM × parroquias (papa, maíz, fréjol)"
+        },
+        {
+          "description": "Parseo ESPAC: plantada + cosechada por cultivo"
+        },
+        {
+          "description": "Comparación MapSPAM vs ESPAC (sin ajuste forzado)"
+        },
+        {
+          "description": "Quinua documentada como dato provincial únicamente"
+        }
+      ]
+    },
+    "report": {
+      "n_parroquias": 42,
+      "n_cultivos_parroquiales": 3,
+      "n_cultivos_provinciales": 1,
+      "limitaciones": [
+        "Quinua sin dato parroquial",
+        "MapSPAM ~10km resolución",
+        "Desfase temporal MapSPAM 2020 vs ESPAC 2024"
+      ],
+      "errores": 0
+    }
+  },
+  "distributionInfo": {
+    "distributionFormat": [
+      {
+        "name": "CSV",
+        "version": "UTF-8-SIG"
+      },
+      {
+        "name": "GeoPackage",
+        "version": "1.3"
+      },
+      {
+        "name": "JSON",
+        "version": "RFC 8259"
+      }
+    ]
+  },
+  "metadataStandardName": "ISO 19115:2014",
+  "metadataStandardVersion": "2014"
+}
