@@ -1,0 +1,69 @@
+{
+  "descripcion": "Comparación MapSPAM vs ESPAC — sin ajuste forzado",
+  "justificacion": "MapSPAM y ESPAC son fuentes independientes. MapSPAM usa modelo de asignación espacial (You et al., 2014). ESPAC usa encuesta muestral con representatividad provincial (INEC, 2022). La discrepancia es informativa, no un error que requiera corrección forzada.",
+  "variable_comparada": "Superficie Cosechada (ha)",
+  "comparacion": {
+    "papa": {
+      "mapspam_ha": 707.86,
+      "espac_cosechada_ha": 1027.09,
+      "ratio_mapspam_espac": 0.6892,
+      "discrepancia_ha": -319.23
+    },
+    "maiz": {
+      "mapspam_ha": 7681.37,
+      "espac_cosechada_ha": 5065.61,
+      "ratio_mapspam_espac": 1.5164,
+      "discrepancia_ha": 2615.76
+    },
+    "frejol": {
+      "mapspam_ha": 2316.91,
+      "espac_cosechada_ha": 1708.0,
+      "ratio_mapspam_espac": 1.3565,
+      "discrepancia_ha": 608.91
+    }
+  },
+  "quinua": {
+    "nivel": "provincial",
+    "plantada_ha": 18.36317914222325,
+    "cosechada_ha": 18.36317914222325,
+    "limitacion": "No existe fuente espacial de quinua a nivel parroquial. ESPAC solo tiene representatividad provincial. MapSPAM no incluye quinua como cultivo individual."
+  },
+  "espac_detalle": {
+    "T43": {
+      "nombre": "Papa (tubérculo fresco)",
+      "plantada_ha": 1095.51,
+      "cosechada_ha": 1027.09
+    },
+    "T38": {
+      "nombre": "Maíz duro choclo",
+      "plantada_ha": 36.16,
+      "cosechada_ha": 20.76
+    },
+    "T39": {
+      "nombre": "Maíz duro seco",
+      "plantada_ha": 1085.4,
+      "cosechada_ha": 1030.12
+    },
+    "T40": {
+      "nombre": "Maíz suave choclo",
+      "plantada_ha": 1660.27,
+      "cosechada_ha": 1558.04
+    },
+    "T41": {
+      "nombre": "Maíz suave seco",
+      "plantada_ha": 2629.76,
+      "cosechada_ha": 2456.69
+    },
+    "T34": {
+      "nombre": "Fréjol seco (grano seco)",
+      "plantada_ha": 1802.02,
+      "cosechada_ha": 1708.0
+    },
+    "T44": {
+      "nombre": "Quinua (grano seco)",
+      "plantada_ha": 18.36,
+      "cosechada_ha": 18.36
+    }
+  },
+  "timestamp": "20260224_205600"
+}
