@@ -1,0 +1,97 @@
+==============================================================================
+  REPORTE DE AUDITORÍA — SCRIPT 04C v3.0
+  DESAGREGACIÓN ESPACIAL DE EXPOSICIÓN AGRÍCOLA POR PARROQUIA
+==============================================================================
+
+  Tesis:       Riesgo agroclimático de cultivos andinos bajo escenarios CMIP6 en la provincia de Imbabura: modelamiento de distribución de especies para la gestión territorial
+  Autor:       Víctor Hugo Pinto Páez
+  Universidad: Universidad San Gregorio de Portoviejo
+  Versión:     3.0.0
+  Inicio:      2026-02-24 20:56:00
+  Fin:         2026-02-24 20:56:07
+  Duración:    7 segundos
+
+  1. FUENTES DE DATOS
+  ------------------------------------------------------------------------
+  Parroquias:  CONALI/INEC (fuente oficial Estado ecuatoriano)
+               Archivo: Imbabura_Parroquia.gpkg
+  MapSPAM:     v2r0 2020, Harvested Area, All technologies
+               DOI: 10.7910/DVN/SWPENT (Harvard Dataverse)
+               Ref: You et al. (2014). IFPRI Discussion Paper 01400
+  ESPAC:       Tabulados 2024 (INEC Ecuador)
+               Ref: INEC (2024). ESPAC 2024
+
+  2. RESULTADOS POR CULTIVO
+  ------------------------------------------------------------------------
+  Cultivo       MapSPAM   ESPAC Cos.    Ratio      Nivel dato
+  ---------- ---------- ------------ -------- ---------------
+  papa            707.9       1027.1    0.689      Parroquial
+  maiz           7681.4       5065.6    1.516      Parroquial
+  frejol         2316.9       1708.0    1.357      Parroquial
+  quinua            N/A         18.4      N/A      PROVINCIAL
+
+  2b. DETALLE ESPAC POR HOJA
+  ------------------------------------------------------------------------
+  Hoja   Cultivo                          Plantada  Cosechada
+  ------ ------------------------------ ---------- ----------
+  T43    Papa (tubérculo fresco)            1095.5     1027.1
+  T38    Maíz duro choclo                     36.2       20.8
+  T39    Maíz duro seco                     1085.4     1030.1
+  T40    Maíz suave choclo                  1660.3     1558.0
+  T41    Maíz suave seco                    2629.8     2456.7
+  T34    Fréjol seco (grano seco)           1802.0     1708.0
+  T44    Quinua (grano seco)                  18.4       18.4
+
+  3. DECISIONES METODOLÓGICAS
+  ------------------------------------------------------------------------
+
+  D1: Límites parroquiales: CONALI/INEC en lugar de GADM v4.1
+      Justificación: CONALI es la autoridad legal del Estado ecuatoriano para límites político-administrativos. GADM es una compilación internacional que puede no coincidir con los límites legales.
+      Referencia: CONALI - Comité Nacional de Límites Internos (Ecuador)
+
+  D2: exactextract con fracción de cobertura para estadísticas zonales
+      Justificación: La resolución de MapSPAM (~86 km²/píxel) es mayor que muchas parroquias de Imbabura (10-80 km²). rasterstats no soporta píxeles parciales: all_touched=True genera doble conteo (+215% a +387%), all_touched=False pierde parroquias pequeñas (-28% a -63%). exactextract calcula la fracción geométrica exacta: sum = Σ(xi × ci). Propiedad verificada: Σ_parroquias = total_provincial (error < 0.01%).
+      Referencia: Baston, D. (2022). exactextract. You et al. (2014). SPAM 2005 v3.2. IFPRI.
+
+  D3: ESPAC como fuente de validación provincial, NO para desagregación
+      Justificación: La metodología ESPAC (INEC, 2022, Sección 1.6) establece explícitamente: 'La ESPAC, debido al diseño muestral no permite hacer mayores desagregaciones geográficas (existe representatividad hasta nivel provincial)'. Usar datos ESPAC a nivel sub-provincial viola las condiciones de representatividad estadística del diseño muestral.
+      Referencia: INEC (2022). Metodología ESPAC 2022. Sección 1.6.
+
+  D4: Comparación MapSPAM vs ESPAC sin ajuste forzado
+      Justificación: MapSPAM y ESPAC son fuentes independientes con metodologías distintas. MapSPAM usa modelamiento de asignación espacial; ESPAC usa encuesta muestral. Forzar coincidencia numérica mediante un factor lineal enmascara discrepancias reales entre fuentes y no tiene respaldo metodológico.
+      Referencia: You et al. (2014). IFPRI. / INEC (2024). ESPAC Metodología.
+
+  D5: Quinua NO se desagrega a nivel parroquial
+      Justificación: No existe fuente verificada de distribución espacial de quinua a nivel parroquial en Imbabura. MapSPAM no incluye quinua. ESPAC tiene representatividad solo provincial (INEC, 2022). Distribuir proporcionalmente por aptitud SDM, área u otro proxy no tiene respaldo en literatura. Se documenta como limitación.
+      Referencia: INEC (2022). Metodología ESPAC, Sección 1.6.
+
+  4. LIMITACIONES DOCUMENTADAS
+  ------------------------------------------------------------------------
+  L1: QUINUA — No existe fuente espacial a nivel parroquial.
+      MapSPAM no incluye quinua. ESPAC solo provincial.
+      PDOTs parroquiales tienen datos heterogéneos en PDF.
+      Impacto: El componente de exposición para quinua se
+      reporta SOLO a nivel provincial en el modelo de riesgo.
+
+  L2: RESOLUCIÓN MAPSPAM — ~10 km puede asignar superficie
+      a parroquias adyacentes. Mitigación: exactextract con
+      fracción de cobertura exacta + verificación de conservación.
+
+  L3: TEMPORALIDAD — MapSPAM 2020, ESPAC 2024. Cuatro años
+      de diferencia entre fuentes. Aceptable para análisis de
+      distribución espacial relativa, no para valores absolutos.
+
+  5. VERIFICACIÓN DE CRITERIOS
+  ------------------------------------------------------------------------
+  ✓ SÍ  Parroquias procesadas (≥40)
+  ✓ SÍ  3 cultivos con datos parroquiales (MapSPAM)
+  ✓ SÍ  Quinua documentada como limitación (provincial)
+  ✓ SÍ  Comparación MapSPAM vs ESPAC generada
+  ✓ SÍ  GeoPackage de exposición generado
+  ✓ SÍ  0 errores críticos
+  ✓ SÍ  Todas las decisiones tienen referencia bibliográfica
+
+  ESTADO: APROBADO
+
+  Advertencias: 0
+  Errores: 0
